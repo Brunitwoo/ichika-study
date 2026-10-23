@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f5f7">
+<title>Ichika Study</title>
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+<div class="app">
+<header><a class="brand" href="#"><span class="logo">i</span> Ichika <span class="light">Study</span></a><button id="theme" class="icon" aria-label="Alternar tema">☼</button></header>
+<main>
+<section class="welcome"><p class="eyebrow" id="today">SEU ESPAÇO DE FOCO</p><h1>Um passo de cada vez<span>.</span></h1><p class="muted">Organize seus estudos. Respeite seu ritmo. Continue evoluindo.</p></section>
+<section class="stats">
+<article class="card stat"><span class="bubble purple">✓</span><small>Tarefas concluídas</small><strong id="done">0</strong><small id="total">de 0 tarefas</small></article>
+<article class="card stat"><span class="bubble blue">◷</span><small>Foco hoje</small><strong><span id="minutes">0</span> <em>min</em></strong><small>minutos registrados</small></article>
+<article class="card stat"><span class="bubble green">↗</span><small>Progresso diário</small><strong id="percent">0%</strong><div class="track"><i id="bar"></i></div></article>
+</section>
+<div class="columns">
+<section class="card panel">
+<div class="heading"><div><p class="eyebrow">PLANEJAMENTO</p><h2>Suas tarefas</h2></div><span class="pill" id="pending">0 pendentes</span></div>
+<form id="task-form"><label class="sr" for="task">Nova tarefa</label><input id="task" maxlength="120" placeholder="O que você quer estudar?" required><button class="primary" type="submit">＋ Adicionar</button></form>
+<nav class="filters" aria-label="Filtrar tarefas"><button class="filter active" data-filter="all">Todas</button><button class="filter" data-filter="open">Pendentes</button><button class="filter" data-filter="done">Concluídas</button></nav>
+<ul id="tasks" class="tasks" aria-live="polite"></ul><div id="empty" class="empty"><span>✳</span><b>Seu espaço está livre</b><small>Adicione uma tarefa pequena para começar.</small></div>
+</section>
+<section class="card panel focus">
+<div class="heading"><div><p class="eyebrow">CONCENTRAÇÃO</p><h2>Modo foco</h2></div><span class="pill live">● Seu ritmo</span></div>
+<div class="timer"><svg viewBox="0 0 220 220" aria-hidden="true"><circle class="ring-bg" cx="110" cy="110" r="98"/><circle id="ring" class="ring" cx="110" cy="110" r="98"/></svg><div class="timer-text"><small id="mode">HORA DE FOCAR</small><strong id="clock">25:00</strong><small id="caption">Pequenos passos, grandes mudanças.</small></div></div>
+<div class="presets"><button class="preset active" data-min="25">25 min</button><button class="preset" data-min="15">15 min</button><button class="preset" data-min="5">5 min</button></div>
+<div class="timer-actions"><button id="start" class="primary">Começar foco</button><button id="reset" class="reset" aria-label="Reiniciar cronômetro">↺</button></div>
+<p class="tip">Dica: deixe o celular em silêncio e foque em uma coisa por vez.</p>
+</section>
+</div>
+<section class="quote"><span class="quote-mark">“</span><div><p>Você não precisa fazer tudo hoje. Só precisa dar o próximo passo.</p><small>LEMBRETE DO ICHIKA STUDY</small></div><span class="sparkle">✦</span></section>
+</main>
+<footer>Feito para estudar no seu ritmo. <span>•</span> Ichika Study</footer><div id="toast" role="status" aria-live="polite"></div>
+</div>
+</body></html>
